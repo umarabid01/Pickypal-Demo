@@ -24,7 +24,7 @@ app.use(
 app.use(express.json());
 
 // Health check
-app.get("/", async (req, res) => {
+app.get(" ", async (req, res) => {
   try {
     await connectDB();
 
