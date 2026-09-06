@@ -1,0 +1,284 @@
+{
+  "restaurants": [
+    {
+      "id": "rec_basilico",
+      "name": "Basilico by Sara",
+      "cuisine": "Italian-Pakistani Fusion",
+      "location": "Gulberg III, Lahore",
+      "rating": 4.5,
+      "halal_certified": true,
+      "menu_items": [
+        {
+          "id": "item_001",
+          "item_name": "Margherita Pizza",
+          "description": "Classic tomato, mozzarella, fresh basil on thin crust",
+          "price": 850,
+          "allergens": ["gluten", "dairy"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": true,
+          "customization_options": "Extra cheese, no basil, add jalapeños, thin/thick crust"
+        },
+        {
+          "id": "item_002",
+          "item_name": "Pesto Pasta",
+          "description": "Penne in homemade basil pesto with parmesan",
+          "price": 750,
+          "allergens": ["gluten", "dairy", "nuts"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": true,
+          "customization_options": "No parmesan, add chicken, gluten-free pasta"
+        },
+        {
+          "id": "item_003",
+          "item_name": "Chicken Alfredo",
+          "description": "Fettuccine in creamy alfredo sauce with grilled chicken",
+          "price": 950,
+          "allergens": ["gluten", "dairy"],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra chicken, no cream, add mushrooms"
+        },
+        {
+          "id": "item_004",
+          "item_name": "Caesar Salad",
+          "description": "Romaine lettuce, croutons, parmesan, Caesar dressing with anchovies",
+          "price": 550,
+          "allergens": ["gluten", "dairy", "eggs", "shellfish"],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "No croutons, no anchovies, add chicken"
+        },
+        {
+          "id": "item_005",
+          "item_name": "Tiramisu",
+          "description": "Classic Italian coffee-flavored dessert",
+          "price": 450,
+          "allergens": ["gluten", "dairy", "eggs"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": false,
+          "customization_options": ""
+        }
+      ]
+    },
+    {
+      "id": "rec_burning_brownie",
+      "name": "Burning Brownie",
+      "cuisine": "Café & Desserts",
+      "location": "DHA Phase 5, Lahore",
+      "rating": 4.3,
+      "halal_certified": true,
+      "menu_items": [
+        {
+          "id": "item_006",
+          "item_name": "Molten Lava Cake",
+          "description": "Warm chocolate cake with gooey center, served with vanilla ice cream",
+          "price": 650,
+          "allergens": ["gluten", "dairy", "eggs"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": true,
+          "customization_options": "No ice cream, extra chocolate sauce"
+        },
+        {
+          "id": "item_007",
+          "item_name": "Chicken Quesadilla",
+          "description": "Grilled tortilla stuffed with chicken, peppers, and cheese",
+          "price": 700,
+          "allergens": ["gluten", "dairy"],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "No cheese, add jalapeños, extra sour cream"
+        },
+        {
+          "id": "item_008",
+          "item_name": "Fruit Smoothie Bowl",
+          "description": "Blended açaí, banana, berries topped with granola and honey",
+          "price": 550,
+          "allergens": ["nuts"],
+          "dietary_tags": ["halal", "vegetarian", "vegan"],
+          "customizable": true,
+          "customization_options": "No granola (nut-free), add chia seeds, no honey"
+        },
+        {
+          "id": "item_009",
+          "item_name": "Club Sandwich",
+          "description": "Triple-decker with chicken, egg, lettuce, tomato, mayo",
+          "price": 600,
+          "allergens": ["gluten", "eggs"],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "No egg, no mayo, add cheese, wheat bread"
+        }
+      ]
+    },
+    {
+      "id": "rec_karachi_biryani",
+      "name": "Karachi Biryani House",
+      "cuisine": "Traditional Pakistani",
+      "location": "Model Town, Lahore",
+      "rating": 4.7,
+      "halal_certified": true,
+      "menu_items": [
+        {
+          "id": "item_010",
+          "item_name": "Chicken Biryani",
+          "description": "Aromatic basmati rice with tender chicken, saffron, and fried onions",
+          "price": 450,
+          "allergens": [],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra spicy, less oil, boneless, add raita"
+        },
+        {
+          "id": "item_011",
+          "item_name": "Mutton Karahi",
+          "description": "Slow-cooked mutton in tomato-ginger gravy, served in karahi",
+          "price": 1200,
+          "allergens": [],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra gravy, less spicy, add green chilies"
+        },
+        {
+          "id": "item_012",
+          "item_name": "Seekh Kebab",
+          "description": "Minced beef kebabs grilled on skewers with spices",
+          "price": 350,
+          "allergens": [],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra spicy, with naan, with chutney"
+        },
+        {
+          "id": "item_013",
+          "item_name": "Daal Chawal",
+          "description": "Yellow lentils with steamed basmati rice and tadka",
+          "price": 250,
+          "allergens": [],
+          "dietary_tags": ["halal", "vegetarian", "vegan"],
+          "customizable": true,
+          "customization_options": "Extra tadka, add pickle, with roti instead of rice"
+        },
+        {
+          "id": "item_014",
+          "item_name": "Gulab Jamun",
+          "description": "Deep-fried milk dumplings soaked in rose-cardamom syrup",
+          "price": 200,
+          "allergens": ["dairy"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": false,
+          "customization_options": ""
+        }
+      ]
+    },
+    {
+      "id": "rec_green_bowl",
+      "name": "The Green Bowl",
+      "cuisine": "Vegetarian & Vegan",
+      "location": "Johar Town, Lahore",
+      "rating": 4.2,
+      "halal_certified": true,
+      "menu_items": [
+        {
+          "id": "item_015",
+          "item_name": "Falafel Wrap",
+          "description": "Crispy falafel with hummus, pickled vegetables in whole wheat wrap",
+          "price": 500,
+          "allergens": ["gluten"],
+          "dietary_tags": ["halal", "vegetarian", "vegan"],
+          "customizable": true,
+          "customization_options": "Extra hummus, no pickles, add tahini, gluten-free wrap"
+        },
+        {
+          "id": "item_016",
+          "item_name": "Buddha Bowl",
+          "description": "Quinoa, roasted chickpeas, avocado, sweet potato, tahini dressing",
+          "price": 650,
+          "allergens": [],
+          "dietary_tags": ["halal", "vegetarian", "vegan"],
+          "customizable": true,
+          "customization_options": "No avocado, add tofu, extra dressing"
+        },
+        {
+          "id": "item_017",
+          "item_name": "Mushroom Risotto",
+          "description": "Creamy arborio rice with mixed mushrooms and truffle oil",
+          "price": 750,
+          "allergens": ["dairy"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": true,
+          "customization_options": "No cheese, make vegan (coconut cream), add asparagus"
+        },
+        {
+          "id": "item_018",
+          "item_name": "Fresh Juice (Seasonal)",
+          "description": "Freshly pressed juice — orange, carrot-ginger, or watermelon",
+          "price": 300,
+          "allergens": [],
+          "dietary_tags": ["halal", "vegetarian", "vegan"],
+          "customizable": true,
+          "customization_options": "No sugar, add ginger, add mint"
+        }
+      ]
+    },
+    {
+      "id": "rec_lahore_tikka",
+      "name": "Lahore Tikka",
+      "cuisine": "BBQ & Grill",
+      "location": "Liberty Market, Lahore",
+      "rating": 4.6,
+      "halal_certified": true,
+      "menu_items": [
+        {
+          "id": "item_019",
+          "item_name": "Chicken Tikka",
+          "description": "Marinated boneless chicken grilled in tandoor with lemon and spices",
+          "price": 400,
+          "allergens": [],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra spicy, with naan, with raita, boneless"
+        },
+        {
+          "id": "item_020",
+          "item_name": "Lamb Chops",
+          "description": "Premium lamb chops marinated and grilled to perfection",
+          "price": 1500,
+          "allergens": [],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Medium rare, well done, with mint chutney"
+        },
+        {
+          "id": "item_021",
+          "item_name": "Tandoori Naan",
+          "description": "Freshly baked naan bread from the clay oven",
+          "price": 80,
+          "allergens": ["gluten"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": true,
+          "customization_options": "Butter naan, garlic naan, plain"
+        },
+        {
+          "id": "item_022",
+          "item_name": "Malai Boti",
+          "description": "Creamy marinated chicken cubes grilled with mild spices",
+          "price": 500,
+          "allergens": ["dairy"],
+          "dietary_tags": ["halal"],
+          "customizable": true,
+          "customization_options": "Extra creamy, spicy version, with rice"
+        },
+        {
+          "id": "item_023",
+          "item_name": "Raita",
+          "description": "Yogurt mixed with cucumber, onion, and mint",
+          "price": 100,
+          "allergens": ["dairy"],
+          "dietary_tags": ["halal", "vegetarian"],
+          "customizable": false,
+          "customization_options": ""
+        }
+      ]
+    }
+  ]
+}
