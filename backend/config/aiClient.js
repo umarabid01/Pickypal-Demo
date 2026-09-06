@@ -23,7 +23,7 @@ export function getAIClient() {
       // current recommended Flash model, so this won't break again when
       // the next model version ships (unlike hardcoding "gemini-2.5-flash",
       // which Google has been retiring throughout 2026).
-      _activeModel = "gemini-3.6-flash";
+      _activeModel = "gemini-3.5-flash-lite";
     } else if (openaiKey) {
       _client = new OpenAI({ apiKey: openaiKey });
       _activeModel = "gpt-4o";
