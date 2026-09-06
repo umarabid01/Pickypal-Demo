@@ -9,7 +9,7 @@ import messageRoute from "./routes/message.js";
 import simulateStepRoute from "./routes/simulateStep.js";
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+
 
 const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
   .split(",")
@@ -30,16 +30,6 @@ app.get("/api/health", (req, res) => {
 app.use("/api/message", messageRoute);
 app.use("/api/simulate-step", simulateStepRoute);
 
-async function start() {
-  try {
-    await connectDB();
-    app.listen(PORT, () => {
-      console.log(`🚀 PickyPal backend running on http://localhost:${PORT}`);
-    });
-  } catch (err) {
-    console.error("❌ Failed to start server:", err.message);
-    process.exit(1);
-  }
-}
+await connectDB();
 
-start();
+export default app;
