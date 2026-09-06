@@ -1,6 +1,7 @@
 // ============================================================
 // PickyPal — Express server entrypoint
 // ============================================================
+
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -9,7 +10,6 @@ import messageRoute from "./routes/message.js";
 import simulateStepRoute from "./routes/simulateStep.js";
 
 const app = express();
-
 
 const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
   .split(",")
@@ -20,16 +20,33 @@ app.use(
     origin: allowedOrigins,
   })
 );
+
 app.use(express.json());
 
-// Health check — also useful to "wake up" a free-tier host that sleeps
-app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", time: new Date().toISOString() });
+// Health check
+app.get("/api/health", async (req, res) => {
+  try {
+    await connectDB();
+
+    res.json({
+      status: "ok",
+      database: "connected",
+      time: new Date().toISOString(),
+    });
+  } catch (err) {
+    console.error("Health check error:", err);
+
+    res.status(500).json({
+      status: "error",
+      database: "disconnected",
+      message: err.message,
+    });
+  }
 });
 
+// API routes
 app.use("/api/message", messageRoute);
 app.use("/api/simulate-step", simulateStepRoute);
 
-await connectDB();
-
+// Export Express app for Vercel
 export default app;
