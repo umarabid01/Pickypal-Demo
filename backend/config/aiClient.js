@@ -1,40 +1,33 @@
 // ============================================================
-// PickyPal — AI client (OpenAI or Google Gemini)
-// Ported from the original config.ts. GEMINI_API_KEY takes
-// priority over OPENAI_API_KEY if both are present.
+// PickyPal — Groq AI client
 // ============================================================
+
 import OpenAI from "openai";
 
 let _client = null;
-let _activeModel = "gpt-4o";
+
+const _activeModel = "openai/gpt-oss-120b";
 
 export function getAIClient() {
   if (!_client) {
-    const geminiKey = process.env.GEMINI_API_KEY;
-    const openaiKey = process.env.OPENAI_API_KEY;
+    const groqKey = process.env.GROQ_API_KEY;
 
-    if (geminiKey) {
-      // Google Gemini via its OpenAI-compatible endpoint (free tier friendly)
-      _client = new OpenAI({
-        apiKey: geminiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-      });
-      // "gemini-flash-latest" is an alias Google keeps pointed at their
-      // current recommended Flash model, so this won't break again when
-      // the next model version ships (unlike hardcoding "gemini-2.5-flash",
-      // which Google has been retiring throughout 2026).
-      _activeModel = "gemini-3.5-flash-lite";
-      // _activeModel = "gemini-3.8-flash";
-    } else if (openaiKey) {
-      _client = new OpenAI({ apiKey: openaiKey });
-      _activeModel = "gpt-4o";
-    } else {
+    if (!groqKey) {
       throw new Error(
-        "No AI API key found. Please add GEMINI_API_KEY or OPENAI_API_KEY to backend/.env."
+        "GROQ_API_KEY is not set. Add it to your backend environment variables."
       );
     }
+
+    _client = new OpenAI({
+      apiKey: groqKey,
+      baseURL: "https://api.groq.com/openai/v1",
+    });
   }
-  return { client: _client, model: _activeModel };
+
+  return {
+    client: _client,
+    model: _activeModel,
+  };
 }
 
 export const AGENT_COLORS = {
