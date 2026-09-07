@@ -28,6 +28,12 @@ app.use(express.json());
 connectDB()
   .then(() => {
     console.log("✅ MongoDB connected at server startup");
+    app.get("/", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "PickyPal backend is running",
+  });
+});
   })
   .catch((err) => {
     console.error("❌ MongoDB connection failed:", err);
