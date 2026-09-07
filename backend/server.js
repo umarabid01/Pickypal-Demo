@@ -1,4 +1,4 @@
-```js
+
 // ============================================================
 // PickyPal — Express server entrypoint
 // ============================================================
@@ -127,32 +127,5 @@ app.use("/api/simulate-step", simulateStepRoute);
 
 export default app;
 
-// ============================================================
-// Local Development
-// ============================================================
 
-// Vercel handles the server itself.
-// This starts Express only when running locally with:
-// npm start
-//
-// If you want to use this, uncomment the section below.
 
-/*
-const PORT = process.env.PORT || 5000;
-
-if (process.env.VERCEL !== "1") {
-  dbConnection
-    .then(() => {
-      app.listen(PORT, () => {
-        console.log(
-          `🚀 PickyPal backend running on http://localhost:${PORT}`
-        );
-      });
-    })
-    .catch((err) => {
-      console.error("❌ Failed to start server:", err);
-      process.exit(1);
-    });
-}
-*/
-```
